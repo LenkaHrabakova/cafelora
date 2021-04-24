@@ -1,4 +1,5 @@
 import './style.css';
+import { Layer } from './Layer/index';
 
 console.log('funguju!');
 
@@ -31,3 +32,43 @@ orderButtonElement.addEventListener('click', () => {
     ordered = false;
   }
 });
+
+// komponenty
+
+let layer = Layer({
+  color: '#feeeca',
+  label: 'mléčná pěna',
+});
+layer += Layer({ color: '#fed7b0', label: 'teplé mléko' });
+layer += Layer({ color: '#613916', label: 'espresso' });
+
+const layerElement = document.querySelector('.drink__info');
+
+layerElement.innerHTML += layer;
+
+//seznam ingredienci
+
+// const layers = [
+//   {
+//     color: '#feeeca',
+//     label: 'mléčná pěna',
+//   },
+//   {
+//     color: '#fed7b0',
+//     label: 'teplé mléko',
+//   },
+//   {
+//     color: '#613916',
+//     label: 'espresso',
+//   },
+// ];
+
+//seznam ingredienci
+
+// for (let i = 0; i < layers.length; i++){
+//   layer = Layer({
+//     color: '#feeeca',
+//     label: 'mléčná pěna',
+//   });
+//   layerElement.innerHTML += layer;
+// }
