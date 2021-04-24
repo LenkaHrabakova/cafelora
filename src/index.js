@@ -2,6 +2,8 @@ import './style.css';
 
 console.log('funguju!');
 
+//navigace
+
 const navElement = document.querySelector('#nav-btn');
 
 const navigation = () => {
@@ -13,11 +15,19 @@ document.querySelectorAll('nav a').forEach((element) => {
 });
 navElement.addEventListener('click', navigation);
 
-// //objednavani
+//objednavani
 
-//   const orderButtonElement = document.querySelector('.order-btn');
-//   const addPrvek = document.querySelector('.drink__cup');
-//  orderButtonElement.addEventListener('click', () =>
-// {
-//     addPrvek.classList.add('drink__cup--selected');
-//     orderButtonElement.textContent = '' });
+const orderButtonElement = document.querySelector('.order-btn');
+const addPrvek = document.querySelector('.drink__cup');
+let ordered = false;
+orderButtonElement.addEventListener('click', () => {
+  if (ordered === false) {
+    addPrvek.classList.add('drink__cup--selected');
+    orderButtonElement.textContent = 'Zrušit';
+    ordered = true;
+  } else {
+    addPrvek.classList.remove('drink__cup--selected');
+    orderButtonElement.textContent = 'Objednat';
+    ordered = false;
+  }
+});
