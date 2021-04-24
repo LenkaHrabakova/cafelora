@@ -295,4 +295,8 @@ nav a:hover {
 
     text-align: center;
   }
+  /* nezobrazuje se ikona v nav */
+  .nav-btn {
+    display: none;
+  }
 }
