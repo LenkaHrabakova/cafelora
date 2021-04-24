@@ -232,7 +232,7 @@ nav a:hover {
 }
 
 .gallery {
-  padding-top: 0;
+  padding-top: 3rem;
   height: 100vh;
 
   color: white;
@@ -240,6 +240,12 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+}
+
+.gallery-text {
+  max-width: 20rem;
+  margin: 0 auto 0 auto;
+  text-align: center;
 }
 
 .contacts {
